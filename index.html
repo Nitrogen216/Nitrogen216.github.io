@@ -1,10 +1,20 @@
-echo "<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-    <title>Welcome to My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is my personal website hosted on GitHub Pages.</p>
+<body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold">欢迎来到我的个人主页</h1>
+            <p class="mt-4 text-lg text-gray-600">这是一个使用 GitHub Pages 托管的简单网站。</p>
+            <a href="https://github.com/your-username" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-full">
+                访问我的 GitHub
+            </a>
+        </div>
+    </div>
 </body>
-</html>" > index.html
+</html>
