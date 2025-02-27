@@ -1,20 +1,282 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Chuyi DAI | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Add Smiley Sans font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/atelier-anchor/smiley-sans@1.1.1/css/smiley-sans.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f2ef;
+            color: #594e4a;
+        }
+        
+        .smiley-font {
+            font-family: 'SmileySans', sans-serif;
+            font-weight: normal;
+            letter-spacing: -0.01em;
+        }
+        
+        .scandi-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .scandi-bg-primary {
+            background-color: #ffffff;
+        }
+        .scandi-bg-secondary {
+            background-color: #efe8e6;
+        }
+        .scandi-text-primary {
+            color: #594e4a;
+        }
+        .scandi-text-secondary {
+            color: #7d7672;
+        }
+        .scandi-accent {
+            color: #8fa3a8;
+        }
+        .scandi-btn {
+            background-color: #a69dac;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        .scandi-btn:hover {
+            background-color: #8c8394;
+        }
+        .scandi-footer {
+            background-color: #e8e4e1;
+            color: #7d7672;
+        }
+        .scandi-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #e2dbd7;
+            transition: all 0.3s ease;
+        }
+        .scandi-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .skill-tag {
+            background-color: #e6eaed;
+            color: #8fa3a8;
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #e2dbd7;
+        }
+        .quote-text {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            color: #7d7672;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid #a69dac;
+        }
+        .hero-overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        input, textarea {
+            background-color: #f5f2ef;
+            border-color: #e2dbd7;
+            color: #594e4a;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            ring-color: #a69dac;
+            border-color: #a69dac;
+        }
+        
+        /* Add subtle muted borders for more Morandi style definition */
+        .border-morandi {
+            border-color: #e2dbd7;
+        }
+        
+        /* Update contact section border */
+        #contact .mt-8 {
+            border-top-color: #e2dbd7;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold">欢迎来到我的个人主页</h1>
-            <p class="mt-4 text-lg text-gray-600">这是一个使用 GitHub Pages 托管的简单网站。</p>
-            <a href="https://github.com/your-username" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-full">
-                访问我的 GitHub
-            </a>
+<body>
+
+<!-- Header/Navigation -->
+<header class="py-6 scandi-bg-primary border-b border-gray-200">
+    <div class="scandi-container px-6 flex justify-between items-center">
+        <div class="text-xl font-medium scandi-text-primary">Chuyi DAI</div>
+        <nav>
+            <ul class="flex space-x-8">
+                <li><a href="#about" class="scandi-text-secondary hover:scandi-accent transition-colors duration-300">About</a></li>
+                <li><a href="#projects" class="scandi-text-secondary hover:scandi-accent transition-colors duration-300">Projects</a></li>
+                <li><a href="#contact" class="scandi-text-secondary hover:scandi-accent transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="py-28 bg-cover bg-center" style="background-image: url('images/hero-background.jpg');">
+    <div class="scandi-container px-6 flex flex-col items-center text-center">
+        <div class="hero-overlay px-12 py-12 rounded-lg max-w-2xl">
+            <h1 class="text-4xl smiley-font scandi-text-primary mb-6">Hello, I'm Chuyi</h1>
+            <p class="text-xl scandi-text-secondary mb-8">I'm a PhD student based in Edmonton, specializing in [your specialties]. I love creating [what you create] that are both functional and beautiful.</p>
+            <a href="#contact" class="scandi-btn px-8 py-3 rounded-md inline-block">Get in Touch</a>
         </div>
     </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24">
+    <div class="scandi-container px-6">
+        <h2 class="text-3xl font-medium scandi-text-primary mb-12 text-center">About Me</h2>
+        
+        <div class="flex flex-col md:flex-row items-start gap-16">
+            <div class="md:w-1/2 self-center">
+                <div class="max-w-md mx-auto">
+                    <img src="images/about-me.jpg" alt="About Me Image" class="rounded-lg shadow-md w-full object-cover">
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <p class="scandi-text-secondary mb-6 text-lg leading-relaxed">
+                    I'm passionate about [your passion] and have been working in [your field] for [number] years. I hold a [your degree] from [your university].
+                </p>
+                <p class="scandi-text-secondary mb-6 text-lg leading-relaxed">
+                    When I'm not [your work], you can find me [your hobbies or interests]. I believe in [your personal philosophy or approach].
+                </p>
+                
+                <h3 class="text-xl font-medium scandi-text-primary mt-10 mb-5">Skills</h3>
+                <div>
+                    <span class="skill-tag">Skill 1</span>
+                    <span class="skill-tag">Skill 2</span>
+                    <span class="skill-tag">Skill 3</span>
+                    <span class="skill-tag">Skill 4</span>
+                    <span class="skill-tag">Skill 5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-24 scandi-bg-secondary">
+    <div class="scandi-container px-6">
+        <h2 class="text-3xl font-medium scandi-text-primary mb-12 text-center">My Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Project 1 -->
+            <div class="scandi-card overflow-hidden">
+                <img src="images/project1.jpg" alt="Stockholm, Sweden" class="w-full h-52 object-cover">
+                <div class="p-8">
+                    <h3 class="text-xl font-medium scandi-text-primary mb-3">Stockholm, Sweden</h3>
+                    <p class="quote-text mb-6">Where ancient cobblestones whisper Nordic tales beneath the gentle dance of summer light, casting golden reflections across archipelago waters.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="scandi-accent hover:underline font-medium">View Live</a>
+                        <a href="#" class="scandi-accent hover:underline font-medium">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="scandi-card overflow-hidden">
+                <img src="images/project2.jpg" alt="Tallinn, Estonia" class="w-full h-52 object-cover">
+                <div class="p-8">
+                    <h3 class="text-xl font-medium scandi-text-primary mb-3">Tallinn, Estonia</h3>
+                    <p class="quote-text mb-6">Wandering through Tallinn's medieval embrace, each of twenty thousand steps reveals a chapter of time frozen between gothic spires and whispered Hanseatic secrets.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="scandi-accent hover:underline font-medium">View Live</a>
+                        <a href="#" class="scandi-accent hover:underline font-medium">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="scandi-card overflow-hidden">
+                <img src="images/project3.jpeg" alt="Tromsø, Norway" class="w-full h-52 object-cover">
+                <div class="p-8">
+                    <h3 class="text-xl font-medium scandi-text-primary mb-3">Tromsø, Norway</h3>
+                    <p class="quote-text mb-6">Under the hypnotic swirl of aurora borealis, Tromsø stands as a luminous sentinel of the Arctic, where darkness and light perform their eternal, celestial ballet.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="scandi-accent hover:underline font-medium">View Live</a>
+                        <a href="#" class="scandi-accent hover:underline font-medium">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-24">
+    <div class="scandi-container px-6">
+        <h2 class="text-3xl font-medium scandi-text-primary mb-12 text-center">Get In Touch</h2>
+        
+        <div class="max-w-md mx-auto scandi-card p-8">
+            <form>
+                <div class="mb-6">
+                    <label for="name" class="block text-sm scandi-text-secondary mb-1">Name</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="email" class="block text-sm scandi-text-secondary mb-1">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="message" class="block text-sm scandi-text-secondary mb-1">Message</label>
+                    <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800"></textarea>
+                </div>
+                
+                <button type="submit" class="scandi-btn w-full py-3 rounded-md">Send Message</button>
+            </form>
+            
+            <div class="mt-8 pt-6 border-t border-gray-800">
+                <p class="text-center scandi-text-secondary mb-4">Or reach me directly at:</p>
+                <div class="flex justify-center space-x-8 mt-4">
+                    <a href="mailto:your.email@example.com" class="scandi-accent hover:underline">Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="scandi-accent hover:underline">LinkedIn</a>
+                    <a href="https://github.com/yourusername" class="scandi-accent hover:underline">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer section -->
+<footer class="scandi-footer py-8">
+    <div class="scandi-container px-6 text-center">
+        <p>&copy; 2024 Chuyi DAI. Made with ❤️ in Edmonton. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>
